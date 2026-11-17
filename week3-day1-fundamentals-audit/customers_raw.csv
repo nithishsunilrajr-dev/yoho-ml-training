@@ -1,0 +1,33 @@
+customer_id,name,email,city,age,phone
+101,Customer_1,user1@mail.com,Chennai,28,9876543210
+102,Customer_2,user2@mail.com,chennai,34,9876543210
+103,Customer_3,user3@mail.com,CHENNAI ,-5,9876543210
+104,Customer_4,user4@mail.com,Madurai,45,9876543210
+105,Customer_5,user5@mail.com,madurai,29,9876543210
+106,Customer_6,,Coimbatore ,250,9876543210
+107,Customer_7,user7@mail.com,Chennai,31,12345
+108,Customer_8,user8@mail.com,chennai,40,9876543210
+109,Customer_9,user9@mail.com,CHENNAI ,28,9876543210
+110,Customer_10,user10@mail.com,Madurai,34,9876543210
+111,Customer_11,user11@mail.com,madurai,-5,9876543210
+112,Customer_12,,Coimbatore ,45,9876543210
+113,Customer_13,user13@mail.com,Chennai,29,9876543210
+114,Customer_14,user14@mail.com,chennai,250,12345
+115,Customer_15,user15@mail.com,CHENNAI ,31,9876543210
+116,Customer_16,user16@mail.com,Madurai,40,9876543210
+117,Customer_17,user17@mail.com,madurai,28,9876543210
+118,Customer_18,,Coimbatore ,34,9876543210
+119,Customer_19,user19@mail.com,Chennai,-5,9876543210
+120,Customer_20,user20@mail.com,chennai,45,9876543210
+121,Customer_21,user21@mail.com,CHENNAI ,29,12345
+122,Customer_22,user22@mail.com,Madurai,250,9876543210
+123,Customer_23,user23@mail.com,madurai,31,9876543210
+124,Customer_24,,Coimbatore ,40,9876543210
+125,Customer_25,user25@mail.com,Chennai,28,9876543210
+126,Customer_26,user26@mail.com,chennai,34,9876543210
+127,Customer_27,user27@mail.com,CHENNAI ,-5,9876543210
+128,Customer_28,user28@mail.com,Madurai,45,12345
+129,Customer_29,user29@mail.com,madurai,29,9876543210
+101,Customer_1,user1@mail.com,Chennai,28,9876543210
+105,Customer_5,user5@mail.com,madurai,29,9876543210
+110,Customer_10,user10@mail.com,Madurai,34,9876543210

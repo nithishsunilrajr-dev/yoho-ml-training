@@ -1,0 +1,14 @@
+# Week 3 – Day 3 (First Half): Solution Decision Template
+
+*(Note: ⭐ marks the 2 problems most often wrongly solved with an LLM.)*
+
+| Problem | Input Type | Output Type | Constraints (Latency, Cost, Explainability) | Recommended Tool | Human Approval? | Why |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **1. Leave balance lookup** | Structured DB row (`employee_id`) | Exact integer (remaining days) | <100ms latency, near-zero cost, 100% exactness | **SQL** | No | Exact lookup of structured HR records requires deterministic querying, not AI[cite: 19]. |
+| **2. Invoice tax calculation** ⭐ | Structured numbers (`subtotal`, `gst_rate`, `state`) | Exact currency decimal | <10ms latency, zero cost, 100% auditability | **Python function** | No | *(Most often wrongly solved with LLM)* Tax math is deterministic; LLMs make arithmetic errors and add unnecessary API cost[cite: 19]. |
+| **3. Resume screening** | Unstructured PDF text + Job Description | Ranked shortlist & match score | Batch latency, medium cost, high explainability (bias audit) | **ML / Embedding Similarity** | **Yes** | Scores candidates from historical/semantic patterns, but HR must approve to prevent hiring bias[cite: 19]. |
+| **4. HR policy Q&A** | Natural language question + Policy PDFs | Grounded text answer with citations | <3s latency, low-medium cost, verifiable citations | **RAG + LLM** | No | Answers require semantic search over unstructured policy PDFs grounded strictly in company text[cite: 19]. |
+| **5. Predicting attrition** | Structured tabular HR & payroll history | Churn probability (`0.0–1.0`) + top drivers | Batch/weekly latency, low cost, high explainability (SHAP) | **ML (XGBoost / RF)** | **Yes** | Learns statistical patterns from historical employee data; HR managers approve retention outreach[cite: 19]. |
+| **6. Auto-reply to emails** | Incoming unstructured email text | Drafted email response | <5s latency, medium cost, tone & accuracy control | **LLM (with RAG)** | **Yes** | Generates fluent contextual drafts, but human approval prevents sending hallucinated commitments externally[cite: 19]. |
+| **7. Monthly payroll run** ⭐ | Structured attendance, tax slabs & salary tables | Bank transfer file & payslips | Batch schedule, zero error tolerance, strict audit trail | **Python rules + SQL** | **Yes** | *(Most often wrongly solved with LLM)* Payroll follows strict statutory formulas; finance approves before funds transfer[cite: 19]. |
+| **8. Onboarding workflow across 4 systems** | New hire trigger event + employee details | API actions (Email, Slack, Jira, HRMS accounts) | Asynchronous (minutes), medium cost, step-by-step logs | **AI Agent (Orchestrator)** | **Yes** | Requires multi-step tool execution across 4 APIs with human confirmation before granting admin permissions[cite: 19]. |
